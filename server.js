@@ -6,7 +6,7 @@ import blogRouter from './routes/BlogRoutes.js';
 import annoucementRouter from './routes/annoucement.js';
 import videoRouter from './routes/video.js';
 import galleryRouter from './routes/gallery.js';
-
+import teamRouter from './routes/team.js'
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -50,6 +50,7 @@ app.use('/api/blogs', blogRouter);
 app.use('/api/community/annoucement', annoucementRouter);
 app.use('/api/community/video', videoRouter);
 app.use('/api/community/gallery', galleryRouter);
+app.use('/api/team', teamRouter);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);

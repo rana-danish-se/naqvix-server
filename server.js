@@ -3,6 +3,9 @@ import cors from 'cors';
 import 'dotenv/config';
 import connectDB from './configs/db.js';
 import blogRouter from './routes/BlogRoutes.js';
+import annoucementRouter from './routes/annoucement.js'
+import videoRouter from './routes/video.js'
+import galleryRouter from './routes/gallery.js'
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -37,6 +40,9 @@ app.use((err, req, res, next) => {
 });
 
 app.use('/api/blogs', blogRouter);
+app.use('/api/community/annoucement',annoucementRouter)
+app.use('/api/community/video',videoRouter)
+app.use('/api/community/gallery',galleryRouter)
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);

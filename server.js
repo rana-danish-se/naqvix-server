@@ -19,7 +19,7 @@ app.use(
         'http://localhost:3000',
         'http://localhost:5173',
         'https://naqvix.vercel.app',
-        'https://naqvix-admin.vercel.app',
+        'https://naqvix-admin-eight.vercel.app',
       ];
       // allow requests with no origin (like mobile apps or curl)
       if (!origin) return callback(null, true);
